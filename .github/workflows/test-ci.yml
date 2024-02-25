@@ -31,5 +31,3 @@ jobs:
       run: |
         docker build . -t service-test-nodejs:latest
         docker images
-
-
