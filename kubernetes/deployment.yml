@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: eks-service-nodejs-rest
+  name: service-nodejs
 spec:
   replicas: 3 
   selector:
     matchLabels:
-      app: eks-service-nodejs-rest
+      app: service-nodejs
   template:
     metadata:
       labels:
-        app: eks-service-nodejs-rest
+        app: service-nodejs
     spec:
       containers:
-        - name: eks-service-nodejs-rest
-          image: service-test-nodejs:latest
+        - name: service-nodejs-container
+          image: josemanuel1999/service-test-nodejs:latest
           ports:
             - containerPort: 3000
