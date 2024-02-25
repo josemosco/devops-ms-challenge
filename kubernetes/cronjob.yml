@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: service-nodejs
+spec:
+  schedule: "*/5 * * * *" 
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: service-nodejs-container
+            image: josemanuel1999/service-test-nodejs:latest
+          restartPolicy: OnFailure
