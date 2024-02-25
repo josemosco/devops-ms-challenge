@@ -7,6 +7,6 @@ describe('Example test', () => {
       .send({
         message: 'Ping!'
       })
-    expect(res.statusCode).toEqual(404)
+    expect(res.statusCode).toEqual(200)
   })
 })
