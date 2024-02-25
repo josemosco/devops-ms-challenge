@@ -28,7 +28,8 @@ jobs:
       run: npm test
     
     - name: Build Image Dockerfile
-      run:
-        - docker build . -t service-test-nodejs:latest
-        - docker images
+      run: |
+        docker build . -t service-test-nodejs:latest
+        docker images
+
 
