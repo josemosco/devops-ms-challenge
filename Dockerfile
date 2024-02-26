@@ -13,8 +13,6 @@ RUN npm install
 # Copiar los archivos de la aplicación desde el directorio src/
 COPY src/ .
 
-# Exponer el puerto en el que se ejecuta tu aplicación
+# Exponer el puerto en el que se ejecuta tu aplicación y correr comandos del contenedor
 EXPOSE 3000
-
-# Comando para ejecutar la aplicación cuando el contenedor se inicia
 CMD ["node", "server.js"]
